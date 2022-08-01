@@ -32,6 +32,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="0Harmony, Version=2.5.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\_Libs_KKS\0Harmony.dll</HintPath>
+    </Reference>
     <Reference Include="Assembly-CSharp">
       <HintPath>..\..\_Libs_KKS\Assembly-CSharp.dll</HintPath>
     </Reference>
@@ -44,6 +48,15 @@
     <Reference Include="KKS_VMDPlayPlugin">
       <HintPath>..\..\_Libs_KKS\KKS_VMDPlayPlugin.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Scripting">
+      <HintPath>..\..\_Libs_KKS\Microsoft.Scripting.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Scripting.Core">
+      <HintPath>..\..\_Libs_KKS\Microsoft.Scripting.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Scripting.Metadata">
+      <HintPath>..\..\_Libs_KKS\Microsoft.Scripting.Metadata.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -54,6 +67,9 @@
     <Reference Include="System.Xml" />
     <Reference Include="Timeline">
       <HintPath>..\..\_Libs_KKS\Timeline.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Console">
+      <HintPath>..\..\_Libs_KKS\Unity.Console.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine">
       <HintPath>..\..\_Libs_KKS\UnityEngine.dll</HintPath>

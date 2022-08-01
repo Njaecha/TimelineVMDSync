@@ -56,6 +56,12 @@
       <HintPath>Libs\KKVMDPlayPlugin.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Microsoft.Scripting">
+      <HintPath>..\..\_Libs_KK\Microsoft.Scripting.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Scripting.Core">
+      <HintPath>..\..\_Libs_KK\Microsoft.Scripting.Core.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -64,6 +70,9 @@
     <Reference Include="System.Xml" />
     <Reference Include="Timeline">
       <HintPath>Libs\Timeline.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Console">
+      <HintPath>..\..\_Libs_KK\Unity.Console.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine">
       <HintPath>Libs\UnityEngine.dll</HintPath>
