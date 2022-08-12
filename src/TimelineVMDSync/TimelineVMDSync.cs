@@ -21,7 +21,7 @@ public class TimelineVMDSync : BaseUnityPlugin
 {
     public const string PluginName = "Timeline VMD Sync";
     public const string GUID = "org.njaecha.plugins.timelinevmdsync";
-    public const string Version = "3.0.0";
+    public const string Version = "3.0.2";
 
     internal static new ManualLogSource Logger;
 
@@ -122,6 +122,7 @@ public class TimelineVMDSync : BaseUnityPlugin
     {
         windowRect.height = 205;
 
+
         if (VMDPlayAnimMgr == null) GUI.enabled = false;
         if (GUI.Button(new Rect(10, 20, 105, 25), syncVMDPlay ? "☑️ VMDPlay" : "☐ VMDPlay"))
         {
@@ -152,10 +153,12 @@ public class TimelineVMDSync : BaseUnityPlugin
         GUI.enabled = true;
         if (GUI.Button(new Rect(10, 85, 105, 25), "Stop"))
             SyncStop();
+        if (!syncMMDD && !syncVMDPlay) GUI.enabled = false;
         if (GUI.Button(new Rect(10, 115, 220, 25), realTimeSync ? "☑️ Auto Sync" : "☐ Auto Sync"))
         {
             realTimeSync = !realTimeSync;
         }
+        GUI.enabled = true;
         showHotkeyUI = GUI.Toggle(new Rect(10, 145, 220, 25), showHotkeyUI, showHotkeyUI ? "Close Hotkeylist" : "Show Hotkeylist", GUI.skin.button);
         if (showHotkeyUI)
         {
@@ -184,7 +187,8 @@ public class TimelineVMDSync : BaseUnityPlugin
         }
 
         // display if either Timeline and VMD don't match or Timeline and MMDD don't match and the respecitve modes are active. 
-        if ((((Timeline.Timeline.duration - VMDPlayAnimMgr.AnimationLength > 1)
+        if ((VMDPlayAnimMgr != null
+            && ((Timeline.Timeline.duration - VMDPlayAnimMgr.AnimationLength > 1)
             || (VMDPlayAnimMgr.AnimationLength - Timeline.Timeline.duration > 1))
             && syncVMDPlay)
             || (((Timeline.Timeline.duration - MMDDPlaybackLength > 1)
